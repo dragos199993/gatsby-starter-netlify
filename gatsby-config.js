@@ -8,6 +8,17 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
+      resolve: 'gatsby-source-strapi',
+      options: {
+        apiURL: process.env.STRAPI_BACKEND_URL,
+        contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
+          'article',
+          'user'
+        ],
+        queryLimit: 1000,
+      },
+    },
+    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
