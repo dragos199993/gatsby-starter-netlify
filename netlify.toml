@@ -8,4 +8,4 @@
   YARN_FLAGS = "--no-ignore-optional"
 
 [template.environment]
-    STRAPI_BACKEND_URL="Add your strapi backend url"
+    GATSBY_API_URL="Add your strapi backend url"

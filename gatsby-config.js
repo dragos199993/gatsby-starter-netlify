@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV || 'development'}`
+})
+
 module.exports = {
   siteMetadata: {
     title: 'Gatsby + Netlify CMS Starter',
@@ -10,7 +14,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: process.env.STRAPI_BACKEND_URL,
+        apiURL: process.env.GATSBY_API_URL,
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           'article',
           'user'
